@@ -1,14 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-
 package view;
 
-/**
- *
- * @author 20202PF.CC0022
- */
 public class PrincipalJF extends javax.swing.JFrame {
 
     /** Creates new form PrincipalJF */
@@ -30,6 +21,7 @@ public class PrincipalJF extends javax.swing.JFrame {
         menu = new javax.swing.JMenu();
         miVendedor = new javax.swing.JMenuItem();
         miCliente = new javax.swing.JMenuItem();
+        miVeiculo = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
 
         jMenuItem1.setText("jMenuItem1");
@@ -53,6 +45,14 @@ public class PrincipalJF extends javax.swing.JFrame {
             }
         });
         menu.add(miCliente);
+
+        miVeiculo.setText("Veiculo");
+        miVeiculo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                miVeiculoActionPerformed(evt);
+            }
+        });
+        menu.add(miVeiculo);
 
         jMenuBar1.add(menu);
 
@@ -84,6 +84,11 @@ public class PrincipalJF extends javax.swing.JFrame {
         ListaClienteJF telaCliente = new ListaClienteJF();
         telaCliente.setVisible(true);
     }//GEN-LAST:event_miClienteActionPerformed
+
+    private void miVeiculoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_miVeiculoActionPerformed
+        ListaVeiculoJF telaVeiculo = new ListaVeiculoJF();
+        telaVeiculo.setVisible(true);
+    }//GEN-LAST:event_miVeiculoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -126,6 +131,7 @@ public class PrincipalJF extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenu menu;
     private javax.swing.JMenuItem miCliente;
+    private javax.swing.JMenuItem miVeiculo;
     private javax.swing.JMenuItem miVendedor;
     // End of variables declaration//GEN-END:variables
 

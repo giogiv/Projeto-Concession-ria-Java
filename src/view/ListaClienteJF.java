@@ -212,7 +212,7 @@ public class ListaClienteJF extends javax.swing.JFrame {
         for(Cliente vendedor: dao.listaClientes()){
             Object[] linha = {
                 vendedor, 
-                    vendedor.getCPF(), 
+                    vendedor.getCPF()
                             };
             modelo.addRow(linha);
         }

@@ -31,20 +31,20 @@ public class ListaVeiculoJF extends javax.swing.JFrame {
 
         tblVeiculos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
             },
             new String [] {
-                "Nome", "CPF"
+                "Placa", "Cor", "Modelo", "Marca"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.Object.class, java.lang.Object.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false
+                false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -215,10 +215,9 @@ public class ListaVeiculoJF extends javax.swing.JFrame {
 
         modelo.setNumRows(0);
         
-        for(Veiculo vendedor: dao.listaVeiculos()){
+        for(Veiculo veiculo: dao.listaVeiculos()){
             Object[] linha = {
-                vendedor, 
-                    vendedor.getCPF(), 
+                    veiculo.getPlaca(), veiculo.getCor(), veiculo.getModelo(), veiculo.getMarca()
                             };
             modelo.addRow(linha);
         }

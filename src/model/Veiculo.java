@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
-/**
- *
- * @author vanessalagomachado
- */
 public class Veiculo {
     private String placa;
     private String cor;
@@ -71,11 +63,6 @@ public class Veiculo {
 
     public void setModelo(Modelo modelo) {
         this.modelo = modelo;
-    }
-
-    @Override
-    public String toString() {
-        return placa + "Marca: "+marca+" - Modelo: "+modelo;
     }
     
     public String exibirDados(){
